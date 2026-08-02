@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LPU Campus Drives — Placement Portal 2027</title>
-    <meta name="description" content="Navigate all LPU campus placement drives for 2027 batch — Accenture, Walmart, Adobe, Stripe, HighRadius and more.">
+    <meta name="description"
+        content="Navigate all LPU campus placement drives for 2027 batch — Accenture, Walmart, Adobe, Stripe, HighRadius and more.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <style>
         /* ===== RESET & BASE ===== */
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         :root {
             --bg-primary: #0f0f0f;
@@ -24,10 +34,10 @@
             --text-primary: #f0ece4;
             --text-secondary: #a09888;
             --text-muted: #6b6358;
-            --border-subtle: rgba(212,168,67,0.12);
-            --border-card: rgba(255,255,255,0.06);
-            --shadow-card: 0 4px 24px rgba(0,0,0,0.4);
-            --shadow-card-hover: 0 12px 48px rgba(0,0,0,0.6);
+            --border-subtle: rgba(212, 168, 67, 0.12);
+            --border-card: rgba(255, 255, 255, 0.06);
+            --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+            --shadow-card-hover: 0 12px 48px rgba(0, 0, 0, 0.6);
             --radius-lg: 20px;
             --radius-md: 14px;
             --radius-sm: 8px;
@@ -37,7 +47,9 @@
             --transition-smooth: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             font-family: var(--font-body);
@@ -70,11 +82,13 @@
             pointer-events: none;
             z-index: 0;
         }
+
         .ambient-glow--gold {
             background: var(--accent-gold);
             top: -200px;
             right: -100px;
         }
+
         .ambient-glow--warm {
             background: var(--accent-warm);
             bottom: -300px;
@@ -88,24 +102,27 @@
             z-index: 100;
             backdrop-filter: blur(20px) saturate(180%);
             -webkit-backdrop-filter: blur(20px) saturate(180%);
-            background: rgba(15,15,15,0.75);
+            background: rgba(15, 15, 15, 0.75);
             border-bottom: 1px solid var(--border-subtle);
         }
+
         .nav-inner {
             max-width: 1320px;
-            margin: 0 auto;
+            margin: 1 auto;
             padding: 16px 32px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 24px;
         }
+
         .nav-brand {
             display: flex;
             align-items: center;
             gap: 14px;
             text-decoration: none;
         }
+
         .nav-brand-icon {
             width: 44px;
             height: 44px;
@@ -117,12 +134,14 @@
             color: #0f0f0f;
             font-weight: 800;
             font-family: var(--font-display);
-            box-shadow: 0 4px 16px rgba(212,168,67,0.25);
+            box-shadow: 0 4px 16px rgba(212, 168, 67, 0.25);
         }
+
         .nav-brand-text {
             display: flex;
             flex-direction: column;
         }
+
         .nav-brand-text span:first-child {
             font-family: var(--font-display);
             font-weight: 700;
@@ -130,6 +149,7 @@
             color: var(--text-primary);
             letter-spacing: -0.3px;
         }
+
         .nav-brand-text span:last-child {
             font-size: 11px;
             color: var(--text-muted);
@@ -143,15 +163,18 @@
             gap: 32px;
             align-items: center;
         }
+
         .nav-stat {
             text-align: center;
         }
+
         .nav-stat-value {
             font-family: var(--font-display);
             font-size: 22px;
             font-weight: 700;
             color: var(--accent-gold);
         }
+
         .nav-stat-label {
             font-size: 10px;
             text-transform: uppercase;
@@ -167,6 +190,7 @@
             padding: 72px 32px 48px;
             position: relative;
         }
+
         .hero-eyebrow {
             display: inline-flex;
             align-items: center;
@@ -178,12 +202,14 @@
             font-weight: 600;
             margin-bottom: 20px;
         }
+
         .hero-eyebrow::before {
             content: '';
             width: 40px;
             height: 2px;
             background: var(--accent-gold);
         }
+
         .hero h1 {
             font-family: var(--font-display);
             font-size: clamp(36px, 5.5vw, 72px);
@@ -193,6 +219,7 @@
             max-width: 900px;
             margin-bottom: 20px;
         }
+
         .hero h1 em {
             font-style: italic;
             background: linear-gradient(135deg, var(--accent-gold), var(--accent-amber));
@@ -200,6 +227,7 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+
         .hero-sub {
             font-size: 17px;
             color: var(--text-secondary);
@@ -218,11 +246,13 @@
             flex-wrap: wrap;
             align-items: center;
         }
+
         .search-wrapper {
             flex: 1;
             min-width: 280px;
             position: relative;
         }
+
         .search-wrapper i {
             position: absolute;
             left: 20px;
@@ -231,6 +261,7 @@
             color: var(--text-muted);
             font-size: 15px;
         }
+
         .search-input {
             width: 100%;
             padding: 15px 20px 15px 50px;
@@ -243,10 +274,14 @@
             outline: none;
             transition: var(--transition-smooth);
         }
-        .search-input::placeholder { color: var(--text-muted); }
+
+        .search-input::placeholder {
+            color: var(--text-muted);
+        }
+
         .search-input:focus {
             border-color: var(--accent-gold);
-            box-shadow: 0 0 0 3px rgba(212,168,67,0.15);
+            box-shadow: 0 0 0 3px rgba(212, 168, 67, 0.15);
         }
 
         .filter-pills {
@@ -254,6 +289,7 @@
             gap: 8px;
             flex-wrap: wrap;
         }
+
         .filter-pill {
             padding: 10px 20px;
             border-radius: var(--radius-pill);
@@ -267,10 +303,12 @@
             transition: var(--transition-smooth);
             white-space: nowrap;
         }
+
         .filter-pill:hover {
             border-color: var(--accent-gold);
             color: var(--accent-gold);
         }
+
         .filter-pill.active {
             background: var(--accent-gold);
             color: #0f0f0f;
@@ -293,6 +331,7 @@
             align-items: center;
             gap: 8px;
         }
+
         .sort-btn:hover {
             border-color: var(--accent-gold);
             color: var(--accent-gold);
@@ -307,10 +346,12 @@
             justify-content: space-between;
             align-items: center;
         }
+
         .results-count {
             font-size: 14px;
             color: var(--text-muted);
         }
+
         .results-count strong {
             color: var(--accent-gold);
             font-weight: 600;
@@ -341,6 +382,7 @@
             overflow: hidden;
             cursor: pointer;
         }
+
         .drive-card::before {
             content: '';
             position: absolute;
@@ -352,12 +394,14 @@
             opacity: 0;
             transition: var(--transition-smooth);
         }
+
         .drive-card:hover {
             background: var(--bg-card-hover);
-            border-color: rgba(212,168,67,0.2);
+            border-color: rgba(212, 168, 67, 0.2);
             box-shadow: var(--shadow-card-hover);
             transform: translateY(-4px);
         }
+
         .drive-card:hover::before {
             opacity: 1;
         }
@@ -368,6 +412,7 @@
             justify-content: space-between;
             gap: 12px;
         }
+
         .card-company-icon {
             width: 52px;
             height: 52px;
@@ -380,6 +425,7 @@
             flex-shrink: 0;
             letter-spacing: -0.5px;
         }
+
         .card-type-badge {
             font-size: 10px;
             text-transform: uppercase;
@@ -389,12 +435,14 @@
             border-radius: var(--radius-pill);
             white-space: nowrap;
         }
+
         .badge-oncampus {
-            background: rgba(46,160,67,0.15);
+            background: rgba(46, 160, 67, 0.15);
             color: #4ade80;
         }
+
         .badge-competitive {
-            background: rgba(212,168,67,0.15);
+            background: rgba(212, 168, 67, 0.15);
             color: var(--accent-amber);
         }
 
@@ -405,6 +453,7 @@
             color: var(--text-primary);
             line-height: 1.3;
         }
+
         .card-role {
             font-size: 13px;
             color: var(--text-secondary);
@@ -420,6 +469,7 @@
             gap: 16px;
             flex-wrap: wrap;
         }
+
         .card-meta-item {
             display: flex;
             align-items: center;
@@ -427,6 +477,7 @@
             font-size: 12px;
             color: var(--text-muted);
         }
+
         .card-meta-item i {
             font-size: 11px;
             color: var(--accent-gold);
@@ -441,22 +492,25 @@
             padding-top: 16px;
             border-top: 1px solid var(--border-card);
         }
+
         .card-salary {
             font-size: 13px;
             font-weight: 600;
             color: #4ade80;
         }
+
         .card-arrow {
             width: 36px;
             height: 36px;
             border-radius: 50%;
-            background: rgba(212,168,67,0.1);
+            background: rgba(212, 168, 67, 0.1);
             display: grid;
             place-items: center;
             color: var(--accent-gold);
             font-size: 14px;
             transition: var(--transition-smooth);
         }
+
         .drive-card:hover .card-arrow {
             background: var(--accent-gold);
             color: #0f0f0f;
@@ -470,6 +524,7 @@
             padding: 80px 20px;
             color: var(--text-muted);
         }
+
         .no-results i {
             font-size: 48px;
             color: var(--text-muted);
@@ -477,6 +532,7 @@
             margin-bottom: 20px;
             display: block;
         }
+
         .no-results h3 {
             font-family: var(--font-display);
             font-size: 22px;
@@ -496,13 +552,16 @@
             flex-wrap: wrap;
             gap: 16px;
         }
+
         .footer-left {
             font-size: 13px;
             color: var(--text-muted);
         }
+
         .footer-left strong {
             color: var(--accent-gold);
         }
+
         .footer-right {
             font-size: 12px;
             color: var(--text-muted);
@@ -514,34 +573,77 @@
             transform: translateY(20px);
             animation: cardFadeIn 0.5s ease forwards;
         }
+
         @keyframes cardFadeIn {
-            to { opacity: 1; transform: translateY(0); }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 900px) {
-            .hero { padding: 48px 20px 32px; }
-            .controls-bar, .results-bar, .drives-grid, .site-footer { padding-left: 20px; padding-right: 20px; }
-            .nav-inner { padding: 12px 20px; }
-            .nav-stats { display: none; }
-            .drives-grid { grid-template-columns: 1fr; }
+            .hero {
+                padding: 48px 20px 32px;
+            }
+
+            .controls-bar,
+            .results-bar,
+            .drives-grid,
+            .site-footer {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .nav-inner {
+                padding: 12px 20px;
+            }
+
+            .nav-stats {
+                display: none;
+            }
+
+            .drives-grid {
+                grid-template-columns: 1fr;
+            }
         }
+
         @media (max-width: 480px) {
-            .hero h1 { font-size: 28px; }
-            .drive-card { padding: 20px; }
-            .filter-pills { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 8px; }
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .drive-card {
+                padding: 20px;
+            }
+
+            .filter-pills {
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                padding-bottom: 8px;
+            }
         }
 
         /* ===== SCROLLBAR ===== */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--bg-primary); }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
         ::-webkit-scrollbar-thumb {
             background: var(--text-muted);
             border-radius: 4px;
         }
-        ::-webkit-scrollbar-thumb:hover { background: var(--accent-gold); }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-gold);
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Ambient Glows -->
@@ -580,8 +682,8 @@
         <div class="hero-eyebrow">Campus Placements 2027</div>
         <h1>Your Career<br>Starts <em>Right Here.</em></h1>
         <p class="hero-sub">
-            Explore every on-campus and competitive placement drive at LPU. 
-            Click any company card below to view full eligibility, salary, 
+            Explore every on-campus and competitive placement drive at LPU.
+            Click any company card below to view full eligibility, salary,
             selection rounds, and registration details.
         </p>
     </section>
@@ -590,7 +692,8 @@
     <div class="controls-bar">
         <div class="search-wrapper">
             <i class="fa fa-search"></i>
-            <input type="text" class="search-input" id="searchInput" placeholder="Search by company, role, or location...">
+            <input type="text" class="search-input" id="searchInput"
+                placeholder="Search by company, role, or location...">
         </div>
         <div class="filter-pills" id="filterPills">
             <button class="filter-pill active" data-filter="all">All Drives</button>
@@ -623,351 +726,351 @@
     </footer>
 
     <script>
-    /* ============================================================
-       DATA — Each drive with company, role, type, salary, file
-       ============================================================ */
-    const DRIVES = [
-        {
-            company: "Accenture",
-            role: "Associate Software Engineer / Advance Associate / Advanced Application Engineering",
-            type: "oncampus",
-            salary: "₹4.19 – ₹11.18 LPA",
-            location: "PAN India",
-            batch: "2027",
-            branches: "CSE/IT, CAP, ECE, EEE, ME, CE & more",
-            file: "ACCENTURE_7kIP1mfANVnRUJJ 6pb7pA==.htm",
-            color: "#a855f7"
-        },
-        {
-            company: "Acdyon Technologies AI",
-            role: "AI Technology Role",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "CSE/IT",
-            file: "ACDYON TECHNOLOGIES-AI_H3MNmFOKjW 7WoVh9zt tQ==.htm",
-            color: "#3b82f6"
-        },
-        {
-            company: "Adobe",
-            role: "Software Engineer",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "CSE/IT",
-            file: "ADOBE_k53Lp_qo1q9ybzYjnquzKw==.htm",
-            color: "#ef4444"
-        },
-        {
-            company: "AgastyAI",
-            role: "AI/ML Engineer",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "CSE/IT",
-            file: "AGASTYAI_0jWS_tWi lsVhpn3oNrDnw==.htm",
-            color: "#14b8a6"
-        },
-        {
-            company: "Beyobo",
-            role: "Software Development Role",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "CSE/IT",
-            file: "BEYOBO_A rFL_7s9MwLbRECeFxTNQ==.htm",
-            color: "#f97316"
-        },
-        {
-            company: "Broadridge Financial Solutions",
-            role: "Financial Software Solutions",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "CSE/IT",
-            file: "BROADRIDGE FINANCIAL SOLUTIONS INDIA_rdTUwc1wIQsRqFGoaFWZ5A==.htm",
-            color: "#6366f1"
-        },
-        {
-            company: "CloudCounselage Pvt. Ltd.",
-            role: "Software Development",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "CSE/IT",
-            file: "CLOUDCOUNSELAGEPVT.LTD.-NAMpcaWKUK1JVyuWjexvcudA==.htm",
-            color: "#0ea5e9"
-        },
-        {
-            company: "Econship Tech Pvt. Ltd.",
-            role: "Software Testing Engineer",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "CSE/IT",
-            file: "ECONSHIP TECH PVT. LTD-Software Testing Engineer_A0bxcfnZNrknoYtW_lyxRw==.htm",
-            color: "#84cc16"
-        },
-        {
-            company: "Foxo",
-            role: "Software Engineer",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "CSE/IT",
-            file: "FOXO_U8 4NE41Azfd4gEbEpV tQ==.htm",
-            color: "#f43f5e"
-        },
-        {
-            company: "Frugal Testing",
-            role: "QA / Testing Engineer",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "CSE/IT",
-            file: "FRUGAL TESTINGTeGQf3l0fchowNxN0eHNmw==.htm",
-            color: "#8b5cf6"
-        },
-        {
-            company: "Helium Wars",
-            role: "Game Development / Tech Role",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "CSE/IT",
-            file: "HELIUM WARS_48yoIxXrK6N u7zVsJbCgw==.htm",
-            color: "#ec4899"
-        },
-        {
-            company: "Helium Wars",
-            role: "Game Development / Tech Role (II)",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "CSE/IT",
-            file: "HELIUM WARS_5hHCPpTwf54qmqhx3SDn1A==.htm",
-            color: "#ec4899"
-        },
-        {
-            company: "HighRadius",
-            role: "Software Engineer",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "CSE/IT",
-            file: "HIGHRADIUS_mD4LXHjkDP4X0ywLaVWAUg==.htm",
-            color: "#06b6d4"
-        },
-        {
-            company: "Loop Subscriptions",
-            role: "Software Development",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "CSE/IT",
-            file: "LOOP SUBSCRIPTIONS_JMxD7Mvbec3LKiMKVkOWUA==.htm",
-            color: "#22c55e"
-        },
-        {
-            company: "Lovely Bake Studio",
-            role: "Management / Operations",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "Management & more",
-            file: "LOVELY BAKE STUDIO_pZGfQxY0QNilUpru4dx_rg==.htm",
-            color: "#d946ef"
-        },
-        {
-            company: "Medoc Health",
-            role: "Healthcare Tech / Software Role",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "CSE/IT",
-            file: "MEDOC HEALTH_zwm3BE6PpJHMBxAbYOPX7g==.htm",
-            color: "#10b981"
-        },
-        {
-            company: "PFI Innovation Centre",
-            role: "Associate Software Engineer",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "CSE/IT",
-            file: "PFI INNOVATION CENTRE INDIA-Associate Software Engineer_WRrLlS5Z19O8g5hpOGw31A==.htm",
-            color: "#0284c7"
-        },
-        {
-            company: "Planet Spark",
-            role: "Business Development Counsellor",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "All Branches",
-            file: "PLANET SPARK-Business Development CounsellorFF_qFPcyACu2GZJTvi39Nw==.htm",
-            color: "#f59e0b"
-        },
-        {
-            company: "Propel",
-            role: "Software Development",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "CSE/IT",
-            file: "PROPEL_IG1bLZxE_Fsdjt0VvoN52w==.htm",
-            color: "#7c3aed"
-        },
-        {
-            company: "ReachInbox",
-            role: "Software Engineer",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "CSE/IT",
-            file: "REACHINBOX_L6OmDFZ4WAG2CsrrIyqo0Q==.htm",
-            color: "#2563eb"
-        },
-        {
-            company: "Recruit CRM",
-            role: "Software Development",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "CSE/IT",
-            file: "RECRUIT CRM_zxrXJ3KajfaMeJVaOvu7aA==.htm",
-            color: "#059669"
-        },
-        {
-            company: "Storeys",
-            role: "Investment Manager",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "Finance & Management",
-            file: "STOREYS-Investment Manageryb4p9FHhqkzkOq5wPN5MBA==.htm",
-            color: "#ca8a04"
-        },
-        {
-            company: "Stripe",
-            role: "Software Engineer",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "CSE/IT",
-            file: "Stripe__3IJ2ui7ChVwiByELYyir7g==.htm",
-            color: "#6366f1"
-        },
-        {
-            company: "Uptroop Private Limited",
-            role: "Software Development",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "CSE/IT",
-            file: "UPTROOP PRIVATE LIMITED_fVfcrkSFPn_iC983cBQ1XQ==.htm",
-            color: "#e11d48"
-        },
-        {
-            company: "Walmart Global Tech",
-            role: "Graduate Software Engineer Intern",
-            type: "competitive",
-            salary: "As Per Company Norms",
-            location: "Bangalore",
-            batch: "2027",
-            branches: "CSE/IT",
-            file: "WALMART GLOBAL TECHNOLOGY SERVICES-Graduate Software Engineer Intern__lA_ we3KREsIh wLTZT0wA==.htm",
-            color: "#0ea5e9"
-        },
-        {
-            company: "Wingify",
-            role: "Software Developer (Web Development)",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "CSE/IT",
-            file: "WINGIFY-Software Developer (Web Development)__qUjvSOq2WgrlUAPVyPfGSQ==.htm",
-            color: "#f97316"
-        },
-        {
-            company: "Wingify",
-            role: "Software Developer",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "CSE/IT",
-            file: "WINGIFY_qUjvSOq2WgrlUAPVyPfGSQ==.htm",
-            color: "#f97316"
-        },
-        {
-            company: "WonksKnow",
-            role: "Tech / Analytics Role",
-            type: "oncampus",
-            salary: "As Per Company Norms",
-            location: "India",
-            batch: "2027",
-            branches: "CSE/IT",
-            file: "WONKSKNOW _HGOO8ARrGxd4WXYSssrbqg==.htm",
-            color: "#8b5cf6"
+        /* ============================================================
+           DATA — Each drive with company, role, type, salary, file
+           ============================================================ */
+        const DRIVES = [
+            {
+                company: "Accenture",
+                role: "Associate Software Engineer / Advance Associate / Advanced Application Engineering",
+                type: "oncampus",
+                salary: "₹4.19 – ₹11.18 LPA",
+                location: "PAN India",
+                batch: "2027",
+                branches: "CSE/IT, CAP, ECE, EEE, ME, CE & more",
+                file: "ACCENTURE_7kIP1mfANVnRUJJ 6pb7pA==.htm",
+                color: "#a855f7"
+            },
+            {
+                company: "Acdyon Technologies AI",
+                role: "AI Technology Role",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "CSE/IT",
+                file: "ACDYON TECHNOLOGIES-AI_H3MNmFOKjW 7WoVh9zt tQ==.htm",
+                color: "#3b82f6"
+            },
+            {
+                company: "Adobe",
+                role: "Software Engineer",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "CSE/IT",
+                file: "ADOBE_k53Lp_qo1q9ybzYjnquzKw==.htm",
+                color: "#ef4444"
+            },
+            {
+                company: "AgastyAI",
+                role: "AI/ML Engineer",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "CSE/IT",
+                file: "AGASTYAI_0jWS_tWi lsVhpn3oNrDnw==.htm",
+                color: "#14b8a6"
+            },
+            {
+                company: "Beyobo",
+                role: "Software Development Role",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "CSE/IT",
+                file: "BEYOBO_A rFL_7s9MwLbRECeFxTNQ==.htm",
+                color: "#f97316"
+            },
+            {
+                company: "Broadridge Financial Solutions",
+                role: "Financial Software Solutions",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "CSE/IT",
+                file: "BROADRIDGE FINANCIAL SOLUTIONS INDIA_rdTUwc1wIQsRqFGoaFWZ5A==.htm",
+                color: "#6366f1"
+            },
+            {
+                company: "CloudCounselage Pvt. Ltd.",
+                role: "Software Development",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "CSE/IT",
+                file: "CLOUDCOUNSELAGEPVT.LTD.-NAMpcaWKUK1JVyuWjexvcudA==.htm",
+                color: "#0ea5e9"
+            },
+            {
+                company: "Econship Tech Pvt. Ltd.",
+                role: "Software Testing Engineer",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "CSE/IT",
+                file: "ECONSHIP TECH PVT. LTD-Software Testing Engineer_A0bxcfnZNrknoYtW_lyxRw==.htm",
+                color: "#84cc16"
+            },
+            {
+                company: "Foxo",
+                role: "Software Engineer",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "CSE/IT",
+                file: "FOXO_U8 4NE41Azfd4gEbEpV tQ==.htm",
+                color: "#f43f5e"
+            },
+            {
+                company: "Frugal Testing",
+                role: "QA / Testing Engineer",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "CSE/IT",
+                file: "FRUGAL TESTINGTeGQf3l0fchowNxN0eHNmw==.htm",
+                color: "#8b5cf6"
+            },
+            {
+                company: "Helium Wars",
+                role: "Game Development / Tech Role",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "CSE/IT",
+                file: "HELIUM WARS_48yoIxXrK6N u7zVsJbCgw==.htm",
+                color: "#ec4899"
+            },
+            {
+                company: "Helium Wars",
+                role: "Game Development / Tech Role (II)",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "CSE/IT",
+                file: "HELIUM WARS_5hHCPpTwf54qmqhx3SDn1A==.htm",
+                color: "#ec4899"
+            },
+            {
+                company: "HighRadius",
+                role: "Software Engineer",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "CSE/IT",
+                file: "HIGHRADIUS_mD4LXHjkDP4X0ywLaVWAUg==.htm",
+                color: "#06b6d4"
+            },
+            {
+                company: "Loop Subscriptions",
+                role: "Software Development",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "CSE/IT",
+                file: "LOOP SUBSCRIPTIONS_JMxD7Mvbec3LKiMKVkOWUA==.htm",
+                color: "#22c55e"
+            },
+            {
+                company: "Lovely Bake Studio",
+                role: "Management / Operations",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "Management & more",
+                file: "LOVELY BAKE STUDIO_pZGfQxY0QNilUpru4dx_rg==.htm",
+                color: "#d946ef"
+            },
+            {
+                company: "Medoc Health",
+                role: "Healthcare Tech / Software Role",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "CSE/IT",
+                file: "MEDOC HEALTH_zwm3BE6PpJHMBxAbYOPX7g==.htm",
+                color: "#10b981"
+            },
+            {
+                company: "PFI Innovation Centre",
+                role: "Associate Software Engineer",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "CSE/IT",
+                file: "PFI INNOVATION CENTRE INDIA-Associate Software Engineer_WRrLlS5Z19O8g5hpOGw31A==.htm",
+                color: "#0284c7"
+            },
+            {
+                company: "Planet Spark",
+                role: "Business Development Counsellor",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "All Branches",
+                file: "PLANET SPARK-Business Development CounsellorFF_qFPcyACu2GZJTvi39Nw==.htm",
+                color: "#f59e0b"
+            },
+            {
+                company: "Propel",
+                role: "Software Development",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "CSE/IT",
+                file: "PROPEL_IG1bLZxE_Fsdjt0VvoN52w==.htm",
+                color: "#7c3aed"
+            },
+            {
+                company: "ReachInbox",
+                role: "Software Engineer",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "CSE/IT",
+                file: "REACHINBOX_L6OmDFZ4WAG2CsrrIyqo0Q==.htm",
+                color: "#2563eb"
+            },
+            {
+                company: "Recruit CRM",
+                role: "Software Development",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "CSE/IT",
+                file: "RECRUIT CRM_zxrXJ3KajfaMeJVaOvu7aA==.htm",
+                color: "#059669"
+            },
+            {
+                company: "Storeys",
+                role: "Investment Manager",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "Finance & Management",
+                file: "STOREYS-Investment Manageryb4p9FHhqkzkOq5wPN5MBA==.htm",
+                color: "#ca8a04"
+            },
+            {
+                company: "Stripe",
+                role: "Software Engineer",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "CSE/IT",
+                file: "Stripe__3IJ2ui7ChVwiByELYyir7g==.htm",
+                color: "#6366f1"
+            },
+            {
+                company: "Uptroop Private Limited",
+                role: "Software Development",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "CSE/IT",
+                file: "UPTROOP PRIVATE LIMITED_fVfcrkSFPn_iC983cBQ1XQ==.htm",
+                color: "#e11d48"
+            },
+            {
+                company: "Walmart Global Tech",
+                role: "Graduate Software Engineer Intern",
+                type: "competitive",
+                salary: "As Per Company Norms",
+                location: "Bangalore",
+                batch: "2027",
+                branches: "CSE/IT",
+                file: "WALMART GLOBAL TECHNOLOGY SERVICES-Graduate Software Engineer Intern__lA_ we3KREsIh wLTZT0wA==.htm",
+                color: "#0ea5e9"
+            },
+            {
+                company: "Wingify",
+                role: "Software Developer (Web Development)",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "CSE/IT",
+                file: "WINGIFY-Software Developer (Web Development)__qUjvSOq2WgrlUAPVyPfGSQ==.htm",
+                color: "#f97316"
+            },
+            {
+                company: "Wingify",
+                role: "Software Developer",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "CSE/IT",
+                file: "WINGIFY_qUjvSOq2WgrlUAPVyPfGSQ==.htm",
+                color: "#f97316"
+            },
+            {
+                company: "WonksKnow",
+                role: "Tech / Analytics Role",
+                type: "oncampus",
+                salary: "As Per Company Norms",
+                location: "India",
+                batch: "2027",
+                branches: "CSE/IT",
+                file: "WONKSKNOW _HGOO8ARrGxd4WXYSssrbqg==.htm",
+                color: "#8b5cf6"
+            }
+        ];
+
+        /* ============================================================
+           RENDER
+           ============================================================ */
+        const grid = document.getElementById('drivesGrid');
+        const searchInput = document.getElementById('searchInput');
+        const filterPills = document.querySelectorAll('.filter-pill');
+        const sortBtn = document.getElementById('sortBtn');
+        const visibleCountEl = document.getElementById('visibleCount');
+
+        let currentFilter = 'all';
+        let sortAsc = true;
+
+        function getInitials(name) {
+            return name.split(/\s+/).map(w => w[0]).join('').substring(0, 2).toUpperCase();
         }
-    ];
 
-    /* ============================================================
-       RENDER
-       ============================================================ */
-    const grid = document.getElementById('drivesGrid');
-    const searchInput = document.getElementById('searchInput');
-    const filterPills = document.querySelectorAll('.filter-pill');
-    const sortBtn = document.getElementById('sortBtn');
-    const visibleCountEl = document.getElementById('visibleCount');
+        function createCard(drive, index) {
+            const initials = getInitials(drive.company);
+            const typeLabel = drive.type === 'oncampus' ? 'On Campus' : 'Competitive';
+            const badgeClass = drive.type === 'oncampus' ? 'badge-oncampus' : 'badge-competitive';
 
-    let currentFilter = 'all';
-    let sortAsc = true;
+            const card = document.createElement('a');
+            card.className = 'drive-card';
+            card.href = drive.file;
+            card.style.animationDelay = `${index * 0.04}s`;
+            card.dataset.company = drive.company.toLowerCase();
+            card.dataset.role = drive.role.toLowerCase();
+            card.dataset.type = drive.type;
+            card.dataset.location = drive.location.toLowerCase();
 
-    function getInitials(name) {
-        return name.split(/\s+/).map(w => w[0]).join('').substring(0, 2).toUpperCase();
-    }
-
-    function createCard(drive, index) {
-        const initials = getInitials(drive.company);
-        const typeLabel = drive.type === 'oncampus' ? 'On Campus' : 'Competitive';
-        const badgeClass = drive.type === 'oncampus' ? 'badge-oncampus' : 'badge-competitive';
-
-        const card = document.createElement('a');
-        card.className = 'drive-card';
-        card.href = drive.file;
-        card.style.animationDelay = `${index * 0.04}s`;
-        card.dataset.company = drive.company.toLowerCase();
-        card.dataset.role = drive.role.toLowerCase();
-        card.dataset.type = drive.type;
-        card.dataset.location = drive.location.toLowerCase();
-
-        card.innerHTML = `
+            card.innerHTML = `
             <div class="card-header-row">
                 <div class="card-company-icon" style="background: ${drive.color}15; color: ${drive.color};">
                     ${initials}
@@ -992,64 +1095,65 @@
                 <div class="card-arrow"><i class="fa fa-arrow-right"></i></div>
             </div>
         `;
-        return card;
-    }
-
-    function renderCards() {
-        const query = searchInput.value.toLowerCase().trim();
-        let filtered = DRIVES.filter(d => {
-            const matchFilter = currentFilter === 'all' || d.type === currentFilter;
-            const matchSearch = !query ||
-                d.company.toLowerCase().includes(query) ||
-                d.role.toLowerCase().includes(query) ||
-                d.location.toLowerCase().includes(query) ||
-                d.branches.toLowerCase().includes(query);
-            return matchFilter && matchSearch;
-        });
-
-        if (sortAsc) {
-            filtered.sort((a, b) => a.company.localeCompare(b.company));
-        } else {
-            filtered.sort((a, b) => b.company.localeCompare(a.company));
+            return card;
         }
 
-        grid.innerHTML = '';
-        if (filtered.length === 0) {
-            grid.innerHTML = `
+        function renderCards() {
+            const query = searchInput.value.toLowerCase().trim();
+            let filtered = DRIVES.filter(d => {
+                const matchFilter = currentFilter === 'all' || d.type === currentFilter;
+                const matchSearch = !query ||
+                    d.company.toLowerCase().includes(query) ||
+                    d.role.toLowerCase().includes(query) ||
+                    d.location.toLowerCase().includes(query) ||
+                    d.branches.toLowerCase().includes(query);
+                return matchFilter && matchSearch;
+            });
+
+            if (sortAsc) {
+                filtered.sort((a, b) => a.company.localeCompare(b.company));
+            } else {
+                filtered.sort((a, b) => b.company.localeCompare(a.company));
+            }
+
+            grid.innerHTML = '';
+            if (filtered.length === 0) {
+                grid.innerHTML = `
                 <div class="no-results">
                     <i class="fa fa-search"></i>
                     <h3>No drives found</h3>
                     <p>Try a different search term or filter.</p>
                 </div>
             `;
-        } else {
-            filtered.forEach((d, i) => grid.appendChild(createCard(d, i)));
+            } else {
+                filtered.forEach((d, i) => grid.appendChild(createCard(d, i)));
+            }
+            visibleCountEl.textContent = filtered.length;
         }
-        visibleCountEl.textContent = filtered.length;
-    }
 
-    /* ===== EVENT LISTENERS ===== */
-    searchInput.addEventListener('input', renderCards);
+        /* ===== EVENT LISTENERS ===== */
+        searchInput.addEventListener('input', renderCards);
 
-    filterPills.forEach(pill => {
-        pill.addEventListener('click', () => {
-            filterPills.forEach(p => p.classList.remove('active'));
-            pill.classList.add('active');
-            currentFilter = pill.dataset.filter;
+        filterPills.forEach(pill => {
+            pill.addEventListener('click', () => {
+                filterPills.forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
+                currentFilter = pill.dataset.filter;
+                renderCards();
+            });
+        });
+
+        sortBtn.addEventListener('click', () => {
+            sortAsc = !sortAsc;
+            const icon = sortBtn.querySelector('i');
+            icon.className = sortAsc ? 'fa fa-arrow-down-a-z' : 'fa fa-arrow-down-z-a';
             renderCards();
         });
-    });
 
-    sortBtn.addEventListener('click', () => {
-        sortAsc = !sortAsc;
-        const icon = sortBtn.querySelector('i');
-        icon.className = sortAsc ? 'fa fa-arrow-down-a-z' : 'fa fa-arrow-down-z-a';
+        /* ===== INITIAL RENDER ===== */
         renderCards();
-    });
-
-    /* ===== INITIAL RENDER ===== */
-    renderCards();
     </script>
 
 </body>
+
 </html>
